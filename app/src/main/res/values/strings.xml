@@ -1,0 +1,5 @@
+<resources>
+    <string name="app_name">GroupProject</string>
+    <string name="play">Play</string>
+    <string name="nba_higher_or_lower">NBA Higher or Lower</string>
+</resources>

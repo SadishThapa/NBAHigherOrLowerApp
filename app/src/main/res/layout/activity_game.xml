@@ -1,0 +1,172 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/main"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    tools:context=".GameActivity">
+
+
+    <TextView
+        android:id="@+id/current_score"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="10dp"
+        android:layout_marginLeft="20dp"
+        android:text="Current score: 0"
+        android:textSize="24sp" />
+
+
+
+    <ImageView
+        android:id="@+id/player_image_1"
+        android:layout_width="175dp"
+        android:layout_height="175dp"
+        android:layout_below="@id/current_score"
+        android:layout_marginTop="-9dp"
+        android:layout_marginBottom="-20dp"
+        android:layout_centerHorizontal="true"/>
+
+    <RelativeLayout
+        android:id="@+id/sublayout_1"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_margin="10dp"
+        android:layout_below="@id/player_image_1"
+        android:background="@drawable/rounded_corners" >
+
+        <TextView
+            android:id="@+id/first_player"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="10dp"
+            android:layout_marginLeft="20dp"
+            android:text="Aaron Gordon averaged "
+            android:textSize="23sp"
+            android:textColor="@color/white"/>
+
+        <TextView
+            android:id="@+id/stat_number"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_below="@id/first_player"
+            android:layout_marginTop="10dp"
+            android:layout_marginLeft="20dp"
+            android:text="10.5"
+            android:textSize="29sp"
+            android:textStyle="bold"
+            android:textColor="@color/white"/>
+
+        <TextView
+            android:id="@+id/first_player_stat"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_below="@id/stat_number"
+            android:layout_marginTop="10dp"
+            android:layout_marginBottom="10dp"
+            android:layout_marginLeft="20dp"
+            android:text="Rebounds per game in the 2021-22 season"
+            android:textSize="23sp"
+            android:textColor="@color/white"/>
+
+    </RelativeLayout>
+
+    <ImageView
+        android:id="@+id/player_image_2"
+        android:layout_width="175dp"
+        android:layout_height="175dp"
+        android:layout_below="@id/sublayout_1"
+        android:layout_marginTop="-20dp"
+        android:layout_marginBottom="-20dp"
+        android:layout_centerHorizontal="true"/>
+
+    <RelativeLayout
+        android:id="@+id/sublayout_2"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_margin="10dp"
+        android:layout_below="@id/player_image_2"
+        android:background="@drawable/rounded_corners" >
+
+        <TextView
+            android:id="@+id/second_player"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="10dp"
+            android:layout_marginLeft="20dp"
+            android:text="Jimmy Butler had a"
+            android:textSize="23sp"
+            android:textColor="@color/white"/>
+
+        <LinearLayout
+            android:id="@+id/button_layout"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_below="@id/second_player"
+            android:layout_marginTop="10dp"
+            android:orientation="horizontal"
+            android:layout_centerHorizontal="true" >
+
+            <com.google.android.material.button.MaterialButton
+                android:id="@+id/higher"
+                android:layout_width="160dp"
+                android:layout_height="65dp"
+                android:text="Higher ▲"
+                android:textSize="21sp"
+                android:backgroundTint="@color/black"
+                app:strokeColor="@color/black"
+                app:strokeWidth="5dp" />
+
+            <View
+                android:layout_width="20sp"
+                android:layout_height="20sp"
+                />
+
+            <com.google.android.material.button.MaterialButton
+                android:id="@+id/lower"
+                android:layout_width="160dp"
+                android:layout_height="65dp"
+                android:text="Lower ▼"
+                android:textSize="21sp"
+                android:textColor="@color/black"
+                android:backgroundTint="@color/white"
+                app:strokeColor="@color/black"
+                app:strokeWidth="5dp" />
+
+
+        </LinearLayout>
+
+        <TextView
+            android:id="@+id/second_player_stat"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_below="@id/button_layout"
+            android:layout_marginTop="10dp"
+            android:layout_marginBottom="10dp"
+            android:layout_marginLeft="20dp"
+            android:text="Points per game average that season"
+            android:textSize="23sp"
+            android:textColor="@color/white"/>
+
+    </RelativeLayout>
+
+    <ProgressBar
+        android:id="@+id/progressBar"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/sublayout_2"
+        android:layout_centerHorizontal="true"
+        style="@style/Widget.AppCompat.ProgressBar.Horizontal"
+        android:scaleY="4"
+        android:scaleX="8"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+
+
+
+</RelativeLayout>

@@ -113,6 +113,7 @@ class GameActivity : AppCompatActivity() {
         if (game.getSeconds() > 0) {
             anim = ObjectAnimator.ofInt(progressBar, "progress", progressBar.max)
             anim.setDuration((game.getSeconds() * 1000).toLong())
+            // Event driven function that ends game when user runs out of time
             anim.doOnEnd({
                 if(timerInProgress) {
                     endGame("timeout")
@@ -328,7 +329,8 @@ class GameActivity : AppCompatActivity() {
             if( p1 == - 1 ) { // PLAY AGAIN button
                 Log.w("GameActivity", "Starting MainActivity")
                 // startActivity(mainActivityIntent)
-                finish()
+                // restarts game
+                recreate()
 
             } else if( p1 == -2 ) { // LEADERBOARD Button
                 Log.w("GameActivity", "Starting LeaderboardActivity")
